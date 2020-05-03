@@ -2,6 +2,9 @@
 # Data collecting Process for fahmon.sh
 # Dependencies: nvidia-smi, lm-sensors, curl, jq
 
+DEPS="nvidia-smi lm-sensors curl jq"
+bash dep_check.sh $DEPS || exit 1
+
 #################### Temperature ####################
 # Getting CPU Temperature from 'lm-sensors'
 # Getting GPU Temperature and Power Draw from 'nvidia-smi'
